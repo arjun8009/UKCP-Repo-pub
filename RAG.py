@@ -114,7 +114,7 @@ def get_llm_response(chunks, query, file_names, headings):
     chat_history.append({"role": "user", "content": user_prompt})
     user_prompt = user_prompt_dup
 
-    response = client.chat.completions.create(model="gpt-4o-mini",messages=chat_history,temperature=0,max_tokens=1024,)
+    response = client.chat.completions.create(model="gpt-3.5-turbo",messages=chat_history,temperature=0,max_tokens=1024,)
     response_message = response.choices[0].message.content
 
     return response_message
@@ -169,7 +169,7 @@ def retrieve_nodes(queries, chunking_method, similarity_top_k, ranker=None, meta
 
 
 def answer_generation(question, chunking_method, retrieval_type, hierarchical_k, chunking_k, query_k, multiple_query_generation, 
-         hierarchical_reranking, ranker, model='gpt-4o-mini'):
+         hierarchical_reranking, ranker, model='gpt-3.5-turbo'):
 
     
 
