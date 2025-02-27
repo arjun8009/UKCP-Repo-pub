@@ -19,7 +19,7 @@ from get_pickle import get_vectorizer
 
 os.environ["OPENAI_API_KEY"] = "<Enter your API key>"
 client = openai.OpenAI()
-model = "gpt-4o-mini"
+model = "gpt-3.5-turbo"
 
 
 def generate_queries(original_query, multiple_query_generation, query_k):
